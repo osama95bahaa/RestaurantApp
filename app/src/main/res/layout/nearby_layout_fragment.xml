@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/nearbyProgressbar"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/textAndRecycleviewLinearLayout"
+            android:visibility="gone">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/ResNearYouTextView"
+               android:textColor="#000"
+               android:textSize="18sp"
+               android:padding="10dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/nearbyRecycleView"
+                android:visibility="visible"
+                android:paddingBottom="70dp"
+                android:layout_gravity="center"
+                android:scrollbars="vertical"
+                android:clipToPadding="false">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

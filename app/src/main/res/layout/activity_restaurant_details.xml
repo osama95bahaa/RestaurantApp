@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".RestaurantDetailsActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginStart="175dp"
+            android:indeterminateTint="@color/colorPrimary"
+            android:id="@+id/resDetailsProgressbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/allDetailsRelLayout">
+
+
+        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/resDetailsImage"
+        android:src="@drawable/food"
+        android:scaleType="fitXY"
+        />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resDetailsCardView1"
+            app:cardBackgroundColor="#f7f7f7"
+            android:layout_below="@+id/resDetailsImage"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/resDetailsDataLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/resDetailsName"
+                android:text="Name:"
+                android:textStyle="bold"
+                android:layout_gravity="start"
+                android:textSize="22sp"
+                android:textColor="#000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rating_details_textview"
+                android:text="4/5"
+                android:id="@+id/resDetailsRatingNumber"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:id="@+id/resDetailsVotes"
+                    android:text="50 votes"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:id="@+id/cuisineRecyclerView">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resDetailsAvgCostAndCurrency"
+            android:text="Average Cost for two: "
+            android:textColor="#000"
+            android:paddingTop="10dp"
+            android:layout_gravity="center"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resDetailsOnlineDelivery"
+            android:text="Has Online Delivery:  "
+            android:textColor="#000"
+            android:paddingTop="5dp"
+            android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:id="@+id/onlineDeliveryImageView"
+                android:src="@drawable/clear"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resDetailsTableBooking"
+            android:text="Has Table Booking:   "
+            android:paddingTop="3dp"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:id="@+id/tableBookingImageView"
+                android:src="@drawable/tick"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resDetailsCardView2"
+            app:cardBackgroundColor="#f7f7f7"
+            android:layout_below="@+id/resDetailsCardView1"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reviewsLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews: "
+            android:id="@+id/reviewsWord"
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_logo"
+            android:id="@+id/circleImageViewreview"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:background="@drawable/rating_details_textview"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resDetailsRecyclerview"
+        android:layout_below="@+id/reviewsLinearLayout"
+        android:visibility="gone"
+        android:layout_marginTop="35dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resDetailsCardView3"
+            app:cardBackgroundColor="#f7f7f7"
+            android:layout_below="@+id/resDetailsCardView2"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/resDetailsLocationLinearLayout">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:id="@+id/resDetailsAddress"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/rating_details_textview"
+            android:text="See Location on Map" />
+
+    </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </FrameLayout>
+</ScrollView>
